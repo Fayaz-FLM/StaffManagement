@@ -30,7 +30,7 @@ public class Staff {
 	private int staffId;
 	private String firstName;
 	private String lastName;
-	private String phoneNum;
+	private String phoneNumber;
 	
 	@Enumerated(EnumType.STRING)
 	private  StaffType staffType;
@@ -42,7 +42,7 @@ public class Staff {
 	@Enumerated(EnumType.STRING)
 	private StaffSpecialization specialization;
 	
-	private LocalDate doj;
+	private LocalDate dateOfJoining;
 	
 	private int experienceInYears;
 	
