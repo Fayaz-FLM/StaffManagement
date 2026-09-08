@@ -1,8 +1,9 @@
-package com.flm.entity;
+package com.flm.staff.entity;
 
 import java.time.LocalDate;
 
-
+import com.flm.staff.constants.Specialization;
+import com.flm.staff.constants.StaffType;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -36,11 +37,10 @@ public class Staff {
 	private  StaffType staffType;
 	
 	private String role;
-	
 	private String gender;
 	
 	@Enumerated(EnumType.STRING)
-	private StaffSpecialization specialization;
+	private Specialization specialization;
 	
 	private LocalDate dateOfJoining;
 	
