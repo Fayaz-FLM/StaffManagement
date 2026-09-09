@@ -1,5 +1,9 @@
 package com.flm.staff.dao;
 
-public interface DoctorScheduleRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.flm.staff.entity.DoctorSchedule;
+
+public interface DoctorScheduleRepository extends JpaRepository<DoctorSchedule, Integer> {
 
 }
