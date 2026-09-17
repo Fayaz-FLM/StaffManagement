@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.flm.staff.entity.StaffAddress;
 
-public interface StaffAddressRepository extends JpaRepository<StaffAddress, Integer>{
+public interface StaffAddressRepository extends JpaRepository<StaffAddress, Integer> {
 
 }
