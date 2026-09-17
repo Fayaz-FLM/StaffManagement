@@ -19,20 +19,26 @@ import lombok.NoArgsConstructor;
 @Builder
 public class StaffDetails {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long staffDetailsId;
-	
-	@Column(unique = true, nullable = false)
-	private String email;
-	
-	@Column(nullable = false)
-	private String password;
+ 	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long staffDetailsId;
 
-	public StaffDetails(String email, String password) {
+    private String email;
+
+    private String password;
+    
+    private String resetOtp;
+    
+    private LocalDateTime otpExpiryTime;
+    
+    private boolean requirePasswordReset = false;
+
+	public StaffDetails(String email, String password, StaffAddress address, String resetOtp, LocalDateTime otpExpiryTime) {
 		super();
 		this.email = email;
 		this.password = password;
+		this.resetOtp = resetOtp;
+		this.otpExpiryTime = otpExpiryTime;
 	}
 	
 }
